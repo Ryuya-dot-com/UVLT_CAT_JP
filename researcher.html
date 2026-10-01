@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive"><meta name="referrer" content="no-referrer">
+  <title>日本語ベースUVLT CAT：研究者向け情報</title>
+  <link rel="stylesheet" href="styles.css?v=jp-0.1.0">
+</head><body><main>
+  <header><div class="wordmark"><strong>UVLT</strong> CAT · JP</div><a href="./">CATを開く</a></header>
+  <article class="card">
+    <p class="eyebrow">公開デモ · 0.1.0</p><h1>日本語ベースCATの仕様</h1>
+    <p>日本語母語話者の大学生463名によるM3 Raschテストレットモデルを使います。既存の日本語版開発パックと同じ150項目・50テストレット、項目難易度、帯域別テストレット分散、推定処理を使用します。これは2PLの日越比較アプリとは異なるモデルです。</p>
+    <table><tbody>
+      <tr><th>対象フォーム</th><td>UVLT Version B、1K〜5K</td></tr>
+      <tr><th>モデル</th><td>M3 Rasch testlet・guessing = 0、帯域別テストレット分散</td></tr>
+      <tr><th>事前分布</th><td>日本語開発標本の一般因子に基づく正規分布：平均0、SD = 1.165726016259025</td></tr>
+      <tr><th>推定</th><td>テストレット効果を15点Gauss–Hermite積分で周辺化したEAP。θグリッド −10〜10、刻み0.1</td></tr>
+      <tr><th>出題</th><td>最初から事後分散の期待減少（EPVR）が最大の未出題セット。3問を分割せず出題</td></tr>
+      <tr><th>停止</th><td>最小6・最大14セット。6セット以降、グリッド境界フラグがなく事後SD≤0.48で終了。最大数を優先</td></tr>
+      <tr><th>時間</th><td>時間制限なし。自主終了が可能。所要時間には別タブ滞在も含む</td></tr>
+      <tr><th>練習</th><td>本番バンクと重複しない2セット。採点・能力推定から除外</td></tr>
+    </tbody></table>
+    <h2>公開の意味と限界</h2>
+    <p>パラメタと停止条件は開発用の暫定値です。公開URLの作成は、本番運用の妥当性や正式な検証研究の開始を承認するものではありません。元のCAT／全問版クロスオーバー研究の収集ゲートは変更していません。出力はすべてpublic_technical_demoと記録し、正式な研究データと区別します。</p>
+    <p>事後SDと区間は、モデル・校正の点推定に条件付きです。校正不確実性を含む反復標本抽出の標準誤差ではありません。JSONの95%区間はθの等裾事後区間です。数の上限や自主終了は精度達成を意味せず、precisionReachedに別途記録します。</p>
+    <p>項目露出の制御、正式な同意手続き、研究者への自動送信はありません。LJT・LexDepth・全150問とのクロスオーバーは含みません。日本語校正尺度のθを、既存ベトナム語ベースRasch CATのθと直接同一視しないでください。</p>
+    <h2>記録と保存</h2>
+    <p>氏名や学籍番号は収集せず、回答はページのメモリに保持します。再読み込みやタブを閉じると消えます。JSONは出題順、回答、正誤、所要時間、推定値、停止理由、未採点の途中回答、モデル情報、バンクのハッシュを記録します。CSVは採点済み項目ごとの記録です。どちらも問題文・正答キーを複製しません。</p>
+    <p>回答をアプリから自動送信することはありません。配信サーバーには通常のページアクセスが発生します。ブラウザ内採点のため、配信される問題バンクには正答キーとパラメタが含まれます。試験問題の秘匿を保証する構成ではありません。</p>
+    <p><a href="./">日本語ベースCATを開く</a> · <a href="https://uvlt-cat.pages.dev/">既存のベトナム語ベースCAT</a></p>
+  </article>
+</main></body></html>

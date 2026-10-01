@@ -1,0 +1,2157 @@
+{
+  "schemaVersion": "uvlt-testlet-bank-1.0",
+  "packId": "jp463-m3-g0-development-20260715",
+  "label": "JP463 Rasch testlet model with band-specific variances (development only)",
+  "generatedAt": "2026-07-15T00:00:00.000Z",
+  "developmentOnly": true,
+  "operationallyFrozen": false,
+  "model": {
+    "family": "rasch_testlet",
+    "modelId": "M3_RASCH_TESTLET_BAND_G0",
+    "guessing": 0,
+    "generalMean": 0,
+    "generalVariance": 1.358917144983137,
+    "priorMean": 0,
+    "priorSD": 1.165726016259025,
+    "thetaGrid": {
+      "min": -10,
+      "max": 10,
+      "step": 0.1
+    },
+    "testletVarianceStructure": "band_specific",
+    "testletVarianceByBand": {
+      "1k": 2.944075659018914,
+      "2k": 0.7701456971951541,
+      "3k": 0.9820206637644026,
+      "4k": 1.0425425042558587,
+      "5k": 1.0065680367873406
+    },
+    "calibrationSampleSize": 463,
+    "calibrationPopulation": "Japanese L1 university development sample"
+  },
+  "cat": {
+    "selectionMethod": "expected_posterior_variance_reduction",
+    "unit": "whole_three_item_testlet",
+    "minTestlets": 6,
+    "maxTestlets": 14,
+    "targetSE": 0.48,
+    "status": "development thresholds carried forward pending JP CAT replay"
+  },
+  "source": {
+    "itemContent": "App_CAT/script.js BAND_BLUEPRINTS",
+    "calibration": "Paper2 JP463 preliminary M3 fit",
+    "limitations": [
+      "Development-only point estimates; parameter covariance unavailable.",
+      "Source-corpus invariance, fixed-floor sensitivity, residual diagnostics, and CAT replay remain freeze gates.",
+      "Validation responses must not be used to tune this pack."
+    ]
+  },
+  "testlets": [
+    {
+      "testletId": "uvlt_1k_t01",
+      "band": "1k",
+      "bandOrder": 1,
+      "testletOrder": 1,
+      "partOfSpeech": "noun",
+      "options": [
+        "choice",
+        "computer",
+        "garden",
+        "photograph",
+        "price",
+        "week"
+      ],
+      "testletVariance": 2.944075659018914,
+      "items": [
+        {
+          "itemId": "uvlt_1k_t01_i01",
+          "prompt": "cost",
+          "correctOption": "price",
+          "difficulty": -6.815934040855478,
+          "sourceItemId": "1000-1",
+          "itemPosition": 1
+        },
+        {
+          "itemId": "uvlt_1k_t01_i02",
+          "prompt": "picture",
+          "correctOption": "photograph",
+          "difficulty": -8.58369194625227,
+          "sourceItemId": "1000-2",
+          "itemPosition": 2
+        },
+        {
+          "itemId": "uvlt_1k_t01_i03",
+          "prompt": "place where things grow outside",
+          "correctOption": "garden",
+          "difficulty": -5.48815102816661,
+          "sourceItemId": "1000-3",
+          "itemPosition": 3
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_1k_t02",
+      "band": "1k",
+      "bandOrder": 1,
+      "testletOrder": 2,
+      "partOfSpeech": "noun",
+      "options": [
+        "eye",
+        "father",
+        "night",
+        "van",
+        "voice",
+        "year"
+      ],
+      "testletVariance": 2.944075659018914,
+      "items": [
+        {
+          "itemId": "uvlt_1k_t02_i01",
+          "prompt": "body part that sees",
+          "correctOption": "eye",
+          "difficulty": -7.6799998006637065,
+          "sourceItemId": "1000-4",
+          "itemPosition": 4
+        },
+        {
+          "itemId": "uvlt_1k_t02_i02",
+          "prompt": "parent who is a man",
+          "correctOption": "father",
+          "difficulty": -8.594890412639458,
+          "sourceItemId": "1000-5",
+          "itemPosition": 5
+        },
+        {
+          "itemId": "uvlt_1k_t02_i03",
+          "prompt": "part of the day with no sun",
+          "correctOption": "night",
+          "difficulty": -6.4845965835447705,
+          "sourceItemId": "1000-6",
+          "itemPosition": 6
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_1k_t03",
+      "band": "1k",
+      "bandOrder": 1,
+      "testletOrder": 3,
+      "partOfSpeech": "noun",
+      "options": [
+        "center",
+        "note",
+        "state",
+        "tomorrow",
+        "uncle",
+        "winter"
+      ],
+      "testletVariance": 2.944075659018914,
+      "items": [
+        {
+          "itemId": "uvlt_1k_t03_i01",
+          "prompt": "brother of your mother or father",
+          "correctOption": "uncle",
+          "difficulty": -7.226463184593962,
+          "sourceItemId": "1000-7",
+          "itemPosition": 7
+        },
+        {
+          "itemId": "uvlt_1k_t03_i02",
+          "prompt": "middle",
+          "correctOption": "center",
+          "difficulty": -5.988495207121307,
+          "sourceItemId": "1000-8",
+          "itemPosition": 8
+        },
+        {
+          "itemId": "uvlt_1k_t03_i03",
+          "prompt": "short piece of writing",
+          "correctOption": "note",
+          "difficulty": -2.860535946448186,
+          "sourceItemId": "1000-9",
+          "itemPosition": 9
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_1k_t04",
+      "band": "1k",
+      "bandOrder": 1,
+      "testletOrder": 4,
+      "partOfSpeech": "noun",
+      "options": [
+        "box",
+        "brother",
+        "horse",
+        "hour",
+        "house",
+        "plan"
+      ],
+      "testletVariance": 2.944075659018914,
+      "items": [
+        {
+          "itemId": "uvlt_1k_t04_i01",
+          "prompt": "family member",
+          "correctOption": "brother",
+          "difficulty": -5.062295102500418,
+          "sourceItemId": "1000-10",
+          "itemPosition": 10
+        },
+        {
+          "itemId": "uvlt_1k_t04_i02",
+          "prompt": "sixty minutes",
+          "correctOption": "hour",
+          "difficulty": -5.372781052870117,
+          "sourceItemId": "1000-11",
+          "itemPosition": 11
+        },
+        {
+          "itemId": "uvlt_1k_t04_i03",
+          "prompt": "way of doing things",
+          "correctOption": "plan",
+          "difficulty": -6.969141965027838,
+          "sourceItemId": "1000-12",
+          "itemPosition": 12
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_1k_t05",
+      "band": "1k",
+      "bandOrder": 1,
+      "testletOrder": 5,
+      "partOfSpeech": "noun",
+      "options": [
+        "animal",
+        "bath",
+        "crime",
+        "grass",
+        "law",
+        "shoulder"
+      ],
+      "testletVariance": 2.944075659018914,
+      "items": [
+        {
+          "itemId": "uvlt_1k_t05_i01",
+          "prompt": "green leaves that cover the ground",
+          "correctOption": "grass",
+          "difficulty": -4.217800715076205,
+          "sourceItemId": "1000-13",
+          "itemPosition": 13
+        },
+        {
+          "itemId": "uvlt_1k_t05_i02",
+          "prompt": "place to wash",
+          "correctOption": "bath",
+          "difficulty": -6.467700730574836,
+          "sourceItemId": "1000-14",
+          "itemPosition": 14
+        },
+        {
+          "itemId": "uvlt_1k_t05_i03",
+          "prompt": "top end of your arm",
+          "correctOption": "shoulder",
+          "difficulty": -6.250835792032208,
+          "sourceItemId": "1000-15",
+          "itemPosition": 15
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_1k_t06",
+      "band": "1k",
+      "bandOrder": 1,
+      "testletOrder": 6,
+      "partOfSpeech": "verb",
+      "options": [
+        "drink",
+        "educate",
+        "forget",
+        "laugh",
+        "prepare",
+        "suit"
+      ],
+      "testletVariance": 2.944075659018914,
+      "items": [
+        {
+          "itemId": "uvlt_1k_t06_i01",
+          "prompt": "get ready",
+          "correctOption": "prepare",
+          "difficulty": -5.081151758439154,
+          "sourceItemId": "1000-16",
+          "itemPosition": 16
+        },
+        {
+          "itemId": "uvlt_1k_t06_i02",
+          "prompt": "make a happy sound",
+          "correctOption": "laugh",
+          "difficulty": -5.173695264022596,
+          "sourceItemId": "1000-17",
+          "itemPosition": 17
+        },
+        {
+          "itemId": "uvlt_1k_t06_i03",
+          "prompt": "not remember",
+          "correctOption": "forget",
+          "difficulty": -6.9581950020374,
+          "sourceItemId": "1000-18",
+          "itemPosition": 18
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_1k_t07",
+      "band": "1k",
+      "bandOrder": 1,
+      "testletOrder": 7,
+      "partOfSpeech": "verb",
+      "options": [
+        "check",
+        "fight",
+        "return",
+        "tell",
+        "work",
+        "write"
+      ],
+      "testletVariance": 2.944075659018914,
+      "items": [
+        {
+          "itemId": "uvlt_1k_t07_i01",
+          "prompt": "do things to get money",
+          "correctOption": "work",
+          "difficulty": -6.966375447501201,
+          "sourceItemId": "1000-19",
+          "itemPosition": 19
+        },
+        {
+          "itemId": "uvlt_1k_t07_i02",
+          "prompt": "go back again",
+          "correctOption": "return",
+          "difficulty": -8.20248062217343,
+          "sourceItemId": "1000-20",
+          "itemPosition": 20
+        },
+        {
+          "itemId": "uvlt_1k_t07_i03",
+          "prompt": "make sure",
+          "correctOption": "check",
+          "difficulty": -4.1386784254083295,
+          "sourceItemId": "1000-21",
+          "itemPosition": 21
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_1k_t08",
+      "band": "1k",
+      "bandOrder": 1,
+      "testletOrder": 8,
+      "partOfSpeech": "verb",
+      "options": [
+        "bring",
+        "can",
+        "reply",
+        "stare",
+        "understand",
+        "wish"
+      ],
+      "testletVariance": 2.944075659018914,
+      "items": [
+        {
+          "itemId": "uvlt_1k_t08_i01",
+          "prompt": "say or write an answer to somebody",
+          "correctOption": "reply",
+          "difficulty": -2.4546427042333416,
+          "sourceItemId": "1000-22",
+          "itemPosition": 22
+        },
+        {
+          "itemId": "uvlt_1k_t08_i02",
+          "prompt": "carry to another place",
+          "correctOption": "bring",
+          "difficulty": -6.000547669042701,
+          "sourceItemId": "1000-23",
+          "itemPosition": 23
+        },
+        {
+          "itemId": "uvlt_1k_t08_i03",
+          "prompt": "look at for a long time",
+          "correctOption": "stare",
+          "difficulty": -2.6221290012605776,
+          "sourceItemId": "1000-24",
+          "itemPosition": 24
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_1k_t09",
+      "band": "1k",
+      "bandOrder": 1,
+      "testletOrder": 9,
+      "partOfSpeech": "adjective",
+      "options": [
+        "alone",
+        "bad",
+        "cold",
+        "green",
+        "loud",
+        "main"
+      ],
+      "testletVariance": 2.944075659018914,
+      "items": [
+        {
+          "itemId": "uvlt_1k_t09_i01",
+          "prompt": "most important",
+          "correctOption": "main",
+          "difficulty": -7.707659811565448,
+          "sourceItemId": "1000-25",
+          "itemPosition": 25
+        },
+        {
+          "itemId": "uvlt_1k_t09_i02",
+          "prompt": "not good",
+          "correctOption": "bad",
+          "difficulty": -8.552189640579263,
+          "sourceItemId": "1000-26",
+          "itemPosition": 26
+        },
+        {
+          "itemId": "uvlt_1k_t09_i03",
+          "prompt": "not hot",
+          "correctOption": "cold",
+          "difficulty": -8.552189640579261,
+          "sourceItemId": "1000-27",
+          "itemPosition": 27
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_1k_t10",
+      "band": "1k",
+      "bandOrder": 1,
+      "testletOrder": 10,
+      "partOfSpeech": "adjective",
+      "options": [
+        "awful",
+        "definite",
+        "exciting",
+        "general",
+        "mad",
+        "sweet"
+      ],
+      "testletVariance": 2.944075659018914,
+      "items": [
+        {
+          "itemId": "uvlt_1k_t10_i01",
+          "prompt": "certain",
+          "correctOption": "definite",
+          "difficulty": -2.5752808927446367,
+          "sourceItemId": "1000-28",
+          "itemPosition": 28
+        },
+        {
+          "itemId": "uvlt_1k_t10_i02",
+          "prompt": "usual",
+          "correctOption": "general",
+          "difficulty": -3.5499478987904123,
+          "sourceItemId": "1000-29",
+          "itemPosition": 29
+        },
+        {
+          "itemId": "uvlt_1k_t10_i03",
+          "prompt": "very bad",
+          "correctOption": "awful",
+          "difficulty": -2.123972691200754,
+          "sourceItemId": "1000-30",
+          "itemPosition": 30
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_2k_t01",
+      "band": "2k",
+      "bandOrder": 2,
+      "testletOrder": 1,
+      "partOfSpeech": "noun",
+      "options": [
+        "coach",
+        "customer",
+        "feature",
+        "pie",
+        "vehicle",
+        "weed"
+      ],
+      "testletVariance": 0.7701456971951541,
+      "items": [
+        {
+          "itemId": "uvlt_2k_t01_i01",
+          "prompt": "important part of something",
+          "correctOption": "feature",
+          "difficulty": -2.152798107991567,
+          "sourceItemId": "31",
+          "itemPosition": 1
+        },
+        {
+          "itemId": "uvlt_2k_t01_i02",
+          "prompt": "person who trains members of sports teams",
+          "correctOption": "coach",
+          "difficulty": -4.481658098745698,
+          "sourceItemId": "32",
+          "itemPosition": 2
+        },
+        {
+          "itemId": "uvlt_2k_t01_i03",
+          "prompt": "unwanted plant",
+          "correctOption": "weed",
+          "difficulty": -3.3097054810289754,
+          "sourceItemId": "33",
+          "itemPosition": 3
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_2k_t02",
+      "band": "2k",
+      "bandOrder": 2,
+      "testletOrder": 2,
+      "partOfSpeech": "noun",
+      "options": [
+        "average",
+        "discipline",
+        "knowledge",
+        "pocket",
+        "trap",
+        "vegetable"
+      ],
+      "testletVariance": 0.7701456971951541,
+      "items": [
+        {
+          "itemId": "uvlt_2k_t02_i01",
+          "prompt": "food grown in gardens",
+          "correctOption": "vegetable",
+          "difficulty": -5.626087003381089,
+          "sourceItemId": "34",
+          "itemPosition": 4
+        },
+        {
+          "itemId": "uvlt_2k_t02_i02",
+          "prompt": "information which a person has",
+          "correctOption": "knowledge",
+          "difficulty": -4.696865280240714,
+          "sourceItemId": "35",
+          "itemPosition": 5
+        },
+        {
+          "itemId": "uvlt_2k_t02_i03",
+          "prompt": "middle number",
+          "correctOption": "average",
+          "difficulty": -4.6968652802407185,
+          "sourceItemId": "36",
+          "itemPosition": 6
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_2k_t03",
+      "band": "2k",
+      "bandOrder": 2,
+      "testletOrder": 3,
+      "partOfSpeech": "noun",
+      "options": [
+        "circle",
+        "justice",
+        "knife",
+        "onion",
+        "partner",
+        "pension"
+      ],
+      "testletVariance": 0.7701456971951541,
+      "items": [
+        {
+          "itemId": "uvlt_2k_t03_i01",
+          "prompt": "round shape",
+          "correctOption": "circle",
+          "difficulty": -3.910274730310807,
+          "sourceItemId": "37",
+          "itemPosition": 7
+        },
+        {
+          "itemId": "uvlt_2k_t03_i02",
+          "prompt": "something used to cut food",
+          "correctOption": "knife",
+          "difficulty": -4.831499838676038,
+          "sourceItemId": "38",
+          "itemPosition": 8
+        },
+        {
+          "itemId": "uvlt_2k_t03_i03",
+          "prompt": "using laws fairly",
+          "correctOption": "justice",
+          "difficulty": -2.7088673795107927,
+          "sourceItemId": "39",
+          "itemPosition": 9
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_2k_t04",
+      "band": "2k",
+      "bandOrder": 2,
+      "testletOrder": 4,
+      "partOfSpeech": "noun",
+      "options": [
+        "cable",
+        "section",
+        "sheet",
+        "site",
+        "staff",
+        "tank"
+      ],
+      "testletVariance": 0.7701456971951541,
+      "items": [
+        {
+          "itemId": "uvlt_2k_t04_i01",
+          "prompt": "part",
+          "correctOption": "section",
+          "difficulty": -3.530989984680646,
+          "sourceItemId": "40",
+          "itemPosition": 10
+        },
+        {
+          "itemId": "uvlt_2k_t04_i02",
+          "prompt": "place",
+          "correctOption": "site",
+          "difficulty": -3.7305954440891314,
+          "sourceItemId": "41",
+          "itemPosition": 11
+        },
+        {
+          "itemId": "uvlt_2k_t04_i03",
+          "prompt": "something to cover a bed",
+          "correctOption": "sheet",
+          "difficulty": -4.164220319552357,
+          "sourceItemId": "42",
+          "itemPosition": 12
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_2k_t05",
+      "band": "2k",
+      "bandOrder": 2,
+      "testletOrder": 5,
+      "partOfSpeech": "noun",
+      "options": [
+        "apartment",
+        "cap",
+        "envelope",
+        "lawyer",
+        "speed",
+        "union"
+      ],
+      "testletVariance": 0.7701456971951541,
+      "items": [
+        {
+          "itemId": "uvlt_2k_t05_i01",
+          "prompt": "cover for letters",
+          "correctOption": "envelope",
+          "difficulty": -2.665570157887677,
+          "sourceItemId": "43",
+          "itemPosition": 13
+        },
+        {
+          "itemId": "uvlt_2k_t05_i02",
+          "prompt": "kind of hat",
+          "correctOption": "cap",
+          "difficulty": -4.92963161837456,
+          "sourceItemId": "44",
+          "itemPosition": 14
+        },
+        {
+          "itemId": "uvlt_2k_t05_i03",
+          "prompt": "place to live inside a tall building",
+          "correctOption": "apartment",
+          "difficulty": -4.8069241772899725,
+          "sourceItemId": "45",
+          "itemPosition": 15
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_2k_t06",
+      "band": "2k",
+      "bandOrder": 2,
+      "testletOrder": 6,
+      "partOfSpeech": "verb",
+      "options": [
+        "argue",
+        "contribute",
+        "quit",
+        "seek",
+        "vote",
+        "wrap"
+      ],
+      "testletVariance": 0.7701456971951541,
+      "items": [
+        {
+          "itemId": "uvlt_2k_t06_i01",
+          "prompt": "cover tightly and completely",
+          "correctOption": "wrap",
+          "difficulty": -2.476302892043175,
+          "sourceItemId": "46",
+          "itemPosition": 16
+        },
+        {
+          "itemId": "uvlt_2k_t06_i02",
+          "prompt": "give to",
+          "correctOption": "contribute",
+          "difficulty": 0.08962622550342138,
+          "sourceItemId": "47",
+          "itemPosition": 17
+        },
+        {
+          "itemId": "uvlt_2k_t06_i03",
+          "prompt": "look for",
+          "correctOption": "seek",
+          "difficulty": -3.3283746258213847,
+          "sourceItemId": "48",
+          "itemPosition": 18
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_2k_t07",
+      "band": "2k",
+      "bandOrder": 2,
+      "testletOrder": 7,
+      "partOfSpeech": "verb",
+      "options": [
+        "avoid",
+        "contain",
+        "murder",
+        "search",
+        "switch",
+        "trade"
+      ],
+      "testletVariance": 0.7701456971951541,
+      "items": [
+        {
+          "itemId": "uvlt_2k_t07_i01",
+          "prompt": "have something inside",
+          "correctOption": "contain",
+          "difficulty": -2.9666876819668837,
+          "sourceItemId": "49",
+          "itemPosition": 19
+        },
+        {
+          "itemId": "uvlt_2k_t07_i02",
+          "prompt": "look for",
+          "correctOption": "search",
+          "difficulty": -4.417559892663394,
+          "sourceItemId": "50",
+          "itemPosition": 20
+        },
+        {
+          "itemId": "uvlt_2k_t07_i03",
+          "prompt": "try not to do",
+          "correctOption": "avoid",
+          "difficulty": -3.2499466744329646,
+          "sourceItemId": "51",
+          "itemPosition": 21
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_2k_t08",
+      "band": "2k",
+      "bandOrder": 2,
+      "testletOrder": 8,
+      "partOfSpeech": "verb",
+      "options": [
+        "bump",
+        "complicate",
+        "include",
+        "organize",
+        "receive",
+        "warn"
+      ],
+      "testletVariance": 0.7701456971951541,
+      "items": [
+        {
+          "itemId": "uvlt_2k_t08_i01",
+          "prompt": "get something",
+          "correctOption": "receive",
+          "difficulty": -2.244217241689993,
+          "sourceItemId": "52",
+          "itemPosition": 22
+        },
+        {
+          "itemId": "uvlt_2k_t08_i02",
+          "prompt": "hit gently",
+          "correctOption": "bump",
+          "difficulty": -1.6030772930820367,
+          "sourceItemId": "53",
+          "itemPosition": 23
+        },
+        {
+          "itemId": "uvlt_2k_t08_i03",
+          "prompt": "have as part of something",
+          "correctOption": "include",
+          "difficulty": -1.4900334865849794,
+          "sourceItemId": "54",
+          "itemPosition": 24
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_2k_t09",
+      "band": "2k",
+      "bandOrder": 2,
+      "testletOrder": 9,
+      "partOfSpeech": "adjective",
+      "options": [
+        "available",
+        "constant",
+        "electrical",
+        "medical",
+        "proud",
+        "super"
+      ],
+      "testletVariance": 0.7701456971951541,
+      "items": [
+        {
+          "itemId": "uvlt_2k_t09_i01",
+          "prompt": "feeling good about what you have done",
+          "correctOption": "proud",
+          "difficulty": -2.11672781164418,
+          "sourceItemId": "55",
+          "itemPosition": 25
+        },
+        {
+          "itemId": "uvlt_2k_t09_i02",
+          "prompt": "great",
+          "correctOption": "super",
+          "difficulty": -2.773018122981113,
+          "sourceItemId": "56",
+          "itemPosition": 26
+        },
+        {
+          "itemId": "uvlt_2k_t09_i03",
+          "prompt": "happening all the time",
+          "correctOption": "constant",
+          "difficulty": -2.0553636119351766,
+          "sourceItemId": "57",
+          "itemPosition": 27
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_2k_t10",
+      "band": "2k",
+      "bandOrder": 2,
+      "testletOrder": 10,
+      "partOfSpeech": "adjective",
+      "options": [
+        "environmental",
+        "junior",
+        "pure",
+        "rotten",
+        "smooth",
+        "wise"
+      ],
+      "testletVariance": 0.7701456971951541,
+      "items": [
+        {
+          "itemId": "uvlt_2k_t10_i01",
+          "prompt": "bad",
+          "correctOption": "rotten",
+          "difficulty": -0.5852359434504821,
+          "sourceItemId": "58",
+          "itemPosition": 28
+        },
+        {
+          "itemId": "uvlt_2k_t10_i02",
+          "prompt": "not rough",
+          "correctOption": "smooth",
+          "difficulty": -1.0607088298687033,
+          "sourceItemId": "59",
+          "itemPosition": 29
+        },
+        {
+          "itemId": "uvlt_2k_t10_i03",
+          "prompt": "younger in position",
+          "correctOption": "junior",
+          "difficulty": -4.192356753004661,
+          "sourceItemId": "60",
+          "itemPosition": 30
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_3k_t01",
+      "band": "3k",
+      "bandOrder": 3,
+      "testletOrder": 1,
+      "partOfSpeech": "noun",
+      "options": [
+        "angle",
+        "apology",
+        "behavior",
+        "bible",
+        "celebration",
+        "portion"
+      ],
+      "testletVariance": 0.9820206637644026,
+      "items": [
+        {
+          "itemId": "uvlt_3k_t01_i01",
+          "prompt": "actions",
+          "correctOption": "behavior",
+          "difficulty": -3.3857005840500713,
+          "sourceItemId": "61",
+          "itemPosition": 1
+        },
+        {
+          "itemId": "uvlt_3k_t01_i02",
+          "prompt": "happy occasion",
+          "correctOption": "celebration",
+          "difficulty": -3.6067868486977575,
+          "sourceItemId": "62",
+          "itemPosition": 2
+        },
+        {
+          "itemId": "uvlt_3k_t01_i03",
+          "prompt": "statement saying you are sorry",
+          "correctOption": "apology",
+          "difficulty": -3.6067868486977552,
+          "sourceItemId": "63",
+          "itemPosition": 3
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_3k_t02",
+      "band": "3k",
+      "bandOrder": 3,
+      "testletOrder": 2,
+      "partOfSpeech": "noun",
+      "options": [
+        "anxiety",
+        "athlete",
+        "counsel",
+        "foundation",
+        "phrase",
+        "wealth"
+      ],
+      "testletVariance": 0.9820206637644026,
+      "items": [
+        {
+          "itemId": "uvlt_3k_t02_i01",
+          "prompt": "combination of words",
+          "correctOption": "phrase",
+          "difficulty": -3.842377602481532,
+          "sourceItemId": "64",
+          "itemPosition": 4
+        },
+        {
+          "itemId": "uvlt_3k_t02_i02",
+          "prompt": "guidance",
+          "correctOption": "counsel",
+          "difficulty": -1.534193828884725,
+          "sourceItemId": "65",
+          "itemPosition": 5
+        },
+        {
+          "itemId": "uvlt_3k_t02_i03",
+          "prompt": "large amount of money",
+          "correctOption": "wealth",
+          "difficulty": -2.1361905404226085,
+          "sourceItemId": "66",
+          "itemPosition": 6
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_3k_t03",
+      "band": "3k",
+      "bandOrder": 3,
+      "testletOrder": 3,
+      "partOfSpeech": "noun",
+      "options": [
+        "agriculture",
+        "conference",
+        "frequency",
+        "liquid",
+        "regime",
+        "volunteer"
+      ],
+      "testletVariance": 0.9820206637644026,
+      "items": [
+        {
+          "itemId": "uvlt_3k_t03_i01",
+          "prompt": "farming",
+          "correctOption": "agriculture",
+          "difficulty": -3.642051045612348,
+          "sourceItemId": "67",
+          "itemPosition": 7
+        },
+        {
+          "itemId": "uvlt_3k_t03_i02",
+          "prompt": "government",
+          "correctOption": "regime",
+          "difficulty": 0.1714204235883454,
+          "sourceItemId": "68",
+          "itemPosition": 8
+        },
+        {
+          "itemId": "uvlt_3k_t03_i03",
+          "prompt": "person who helps without payment",
+          "correctOption": "volunteer",
+          "difficulty": -4.568731415297537,
+          "sourceItemId": "69",
+          "itemPosition": 9
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_3k_t04",
+      "band": "3k",
+      "bandOrder": 3,
+      "testletOrder": 4,
+      "partOfSpeech": "noun",
+      "options": [
+        "asset",
+        "heritage",
+        "novel",
+        "poverty",
+        "prosecution",
+        "suburb"
+      ],
+      "testletVariance": 0.9820206637644026,
+      "items": [
+        {
+          "itemId": "uvlt_3k_t04_i01",
+          "prompt": "having little money",
+          "correctOption": "poverty",
+          "difficulty": -2.102471222760027,
+          "sourceItemId": "70",
+          "itemPosition": 10
+        },
+        {
+          "itemId": "uvlt_3k_t04_i02",
+          "prompt": "history",
+          "correctOption": "heritage",
+          "difficulty": -2.1439447289950855,
+          "sourceItemId": "71",
+          "itemPosition": 11
+        },
+        {
+          "itemId": "uvlt_3k_t04_i03",
+          "prompt": "useful thing",
+          "correctOption": "asset",
+          "difficulty": 0.7993167053434866,
+          "sourceItemId": "72",
+          "itemPosition": 12
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_3k_t05",
+      "band": "3k",
+      "bandOrder": 3,
+      "testletOrder": 5,
+      "partOfSpeech": "noun",
+      "options": [
+        "audience",
+        "crystal",
+        "intelligence",
+        "outcome",
+        "pit",
+        "welfare"
+      ],
+      "testletVariance": 0.9820206637644026,
+      "items": [
+        {
+          "itemId": "uvlt_3k_t05_i01",
+          "prompt": "ability to learn",
+          "correctOption": "intelligence",
+          "difficulty": -4.083044757764441,
+          "sourceItemId": "73",
+          "itemPosition": 13
+        },
+        {
+          "itemId": "uvlt_3k_t05_i02",
+          "prompt": "deep place",
+          "correctOption": "pit",
+          "difficulty": -0.5309825587850592,
+          "sourceItemId": "74",
+          "itemPosition": 14
+        },
+        {
+          "itemId": "uvlt_3k_t05_i03",
+          "prompt": "people who watch and listen",
+          "correctOption": "audience",
+          "difficulty": -4.999245787237434,
+          "sourceItemId": "75",
+          "itemPosition": 15
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_3k_t06",
+      "band": "3k",
+      "bandOrder": 3,
+      "testletOrder": 6,
+      "partOfSpeech": "verb",
+      "options": [
+        "consent",
+        "enforce",
+        "exhibit",
+        "retain",
+        "specify",
+        "target"
+      ],
+      "testletVariance": 0.9820206637644026,
+      "items": [
+        {
+          "itemId": "uvlt_3k_t06_i01",
+          "prompt": "agree",
+          "correctOption": "consent",
+          "difficulty": -1.3754732251478903,
+          "sourceItemId": "76",
+          "itemPosition": 16
+        },
+        {
+          "itemId": "uvlt_3k_t06_i02",
+          "prompt": "say clearly",
+          "correctOption": "specify",
+          "difficulty": -0.11820876008465371,
+          "sourceItemId": "77",
+          "itemPosition": 17
+        },
+        {
+          "itemId": "uvlt_3k_t06_i03",
+          "prompt": "show in public",
+          "correctOption": "exhibit",
+          "difficulty": -2.5138682991380774,
+          "sourceItemId": "78",
+          "itemPosition": 18
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_3k_t07",
+      "band": "3k",
+      "bandOrder": 3,
+      "testletOrder": 7,
+      "partOfSpeech": "verb",
+      "options": [
+        "accomplish",
+        "capture",
+        "debate",
+        "impose",
+        "proceed",
+        "prohibit"
+      ],
+      "testletVariance": 0.9820206637644026,
+      "items": [
+        {
+          "itemId": "uvlt_3k_t07_i01",
+          "prompt": "catch",
+          "correctOption": "capture",
+          "difficulty": -3.1540175638523573,
+          "sourceItemId": "79",
+          "itemPosition": 19
+        },
+        {
+          "itemId": "uvlt_3k_t07_i02",
+          "prompt": "go on",
+          "correctOption": "proceed",
+          "difficulty": -1.131561766662782,
+          "sourceItemId": "80",
+          "itemPosition": 20
+        },
+        {
+          "itemId": "uvlt_3k_t07_i03",
+          "prompt": "talk about what is correct",
+          "correctOption": "debate",
+          "difficulty": -3.603719789104355,
+          "sourceItemId": "81",
+          "itemPosition": 21
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_3k_t08",
+      "band": "3k",
+      "bandOrder": 3,
+      "testletOrder": 8,
+      "partOfSpeech": "verb",
+      "options": [
+        "absorb",
+        "decline",
+        "exceed",
+        "link",
+        "nod",
+        "persist"
+      ],
+      "testletVariance": 0.9820206637644026,
+      "items": [
+        {
+          "itemId": "uvlt_3k_t08_i01",
+          "prompt": "continue to happen",
+          "correctOption": "persist",
+          "difficulty": -0.4508810174829475,
+          "sourceItemId": "82",
+          "itemPosition": 22
+        },
+        {
+          "itemId": "uvlt_3k_t08_i02",
+          "prompt": "goes beyond the limit",
+          "correctOption": "exceed",
+          "difficulty": -1.148362283716599,
+          "sourceItemId": "83",
+          "itemPosition": 23
+        },
+        {
+          "itemId": "uvlt_3k_t08_i03",
+          "prompt": "take in",
+          "correctOption": "absorb",
+          "difficulty": -0.2333166199841989,
+          "sourceItemId": "84",
+          "itemPosition": 24
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_3k_t09",
+      "band": "3k",
+      "bandOrder": 3,
+      "testletOrder": 9,
+      "partOfSpeech": "adjective",
+      "options": [
+        "approximate",
+        "frequent",
+        "graphic",
+        "pale",
+        "prior",
+        "vital"
+      ],
+      "testletVariance": 0.9820206637644026,
+      "items": [
+        {
+          "itemId": "uvlt_3k_t09_i01",
+          "prompt": "almost exact",
+          "correctOption": "approximate",
+          "difficulty": -1.5447923785347284,
+          "sourceItemId": "85",
+          "itemPosition": 25
+        },
+        {
+          "itemId": "uvlt_3k_t09_i02",
+          "prompt": "earlier",
+          "correctOption": "prior",
+          "difficulty": -1.4784922264289857,
+          "sourceItemId": "86",
+          "itemPosition": 26
+        },
+        {
+          "itemId": "uvlt_3k_t09_i03",
+          "prompt": "happening often",
+          "correctOption": "frequent",
+          "difficulty": -2.1172366712871877,
+          "sourceItemId": "87",
+          "itemPosition": 27
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_3k_t10",
+      "band": "3k",
+      "bandOrder": 3,
+      "testletOrder": 10,
+      "partOfSpeech": "adjective",
+      "options": [
+        "consistent",
+        "enthusiastic",
+        "former",
+        "logical",
+        "marginal",
+        "mutual"
+      ],
+      "testletVariance": 0.9820206637644026,
+      "items": [
+        {
+          "itemId": "uvlt_3k_t10_i01",
+          "prompt": "not changing",
+          "correctOption": "consistent",
+          "difficulty": -0.7549482836303538,
+          "sourceItemId": "88",
+          "itemPosition": 28
+        },
+        {
+          "itemId": "uvlt_3k_t10_i02",
+          "prompt": "occurring earlier in time",
+          "correctOption": "former",
+          "difficulty": -0.7549482836303659,
+          "sourceItemId": "89",
+          "itemPosition": 29
+        },
+        {
+          "itemId": "uvlt_3k_t10_i03",
+          "prompt": "shared",
+          "correctOption": "mutual",
+          "difficulty": 0.3542577796910442,
+          "sourceItemId": "90",
+          "itemPosition": 30
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_4k_t01",
+      "band": "4k",
+      "bandOrder": 4,
+      "testletOrder": 1,
+      "partOfSpeech": "noun",
+      "options": [
+        "cave",
+        "scenario",
+        "sergeant",
+        "stitch",
+        "vitamin",
+        "wax"
+      ],
+      "testletVariance": 1.0425425042558587,
+      "items": [
+        {
+          "itemId": "uvlt_4k_t01_i01",
+          "prompt": "healthy supplement",
+          "correctOption": "vitamin",
+          "difficulty": -4.291100033197668,
+          "sourceItemId": "91",
+          "itemPosition": 1
+        },
+        {
+          "itemId": "uvlt_4k_t01_i02",
+          "prompt": "opening in the ground or in the side of a hill",
+          "correctOption": "cave",
+          "difficulty": -1.1468567570341583,
+          "sourceItemId": "92",
+          "itemPosition": 2
+        },
+        {
+          "itemId": "uvlt_4k_t01_i03",
+          "prompt": "situation",
+          "correctOption": "scenario",
+          "difficulty": -2.030535796559916,
+          "sourceItemId": "93",
+          "itemPosition": 3
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_4k_t02",
+      "band": "4k",
+      "bandOrder": 4,
+      "testletOrder": 2,
+      "partOfSpeech": "noun",
+      "options": [
+        "candle",
+        "diamond",
+        "gulf",
+        "salmon",
+        "soap",
+        "tutor"
+      ],
+      "testletVariance": 1.0425425042558587,
+      "items": [
+        {
+          "itemId": "uvlt_4k_t02_i01",
+          "prompt": "something used for cleaning",
+          "correctOption": "soap",
+          "difficulty": -3.0483346542987593,
+          "sourceItemId": "94",
+          "itemPosition": 4
+        },
+        {
+          "itemId": "uvlt_4k_t02_i02",
+          "prompt": "teacher",
+          "correctOption": "tutor",
+          "difficulty": -2.7977544799130487,
+          "sourceItemId": "95",
+          "itemPosition": 5
+        },
+        {
+          "itemId": "uvlt_4k_t02_i03",
+          "prompt": "valuable stone",
+          "correctOption": "diamond",
+          "difficulty": -3.7037179632013753,
+          "sourceItemId": "96",
+          "itemPosition": 6
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_4k_t03",
+      "band": "4k",
+      "bandOrder": 4,
+      "testletOrder": 3,
+      "partOfSpeech": "noun",
+      "options": [
+        "agony",
+        "kilogram",
+        "orchestra",
+        "scrap",
+        "slot",
+        "soccer"
+      ],
+      "testletVariance": 1.0425425042558587,
+      "items": [
+        {
+          "itemId": "uvlt_4k_t03_i01",
+          "prompt": "group of people who play music",
+          "correctOption": "orchestra",
+          "difficulty": -4.632109149281357,
+          "sourceItemId": "97",
+          "itemPosition": 7
+        },
+        {
+          "itemId": "uvlt_4k_t03_i02",
+          "prompt": "long, thin opening",
+          "correctOption": "slot",
+          "difficulty": 1.515486968115878,
+          "sourceItemId": "98",
+          "itemPosition": 8
+        },
+        {
+          "itemId": "uvlt_4k_t03_i03",
+          "prompt": "small unwanted piece",
+          "correctOption": "scrap",
+          "difficulty": -0.5609728671732638,
+          "sourceItemId": "99",
+          "itemPosition": 9
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_4k_t04",
+      "band": "4k",
+      "bandOrder": 4,
+      "testletOrder": 4,
+      "partOfSpeech": "noun",
+      "options": [
+        "crust",
+        "incidence",
+        "ram",
+        "senator",
+        "venue",
+        "verdict"
+      ],
+      "testletVariance": 1.0425425042558587,
+      "items": [
+        {
+          "itemId": "uvlt_4k_t04_i01",
+          "prompt": "hard outside part",
+          "correctOption": "crust",
+          "difficulty": 0.520314636448473,
+          "sourceItemId": "100",
+          "itemPosition": 10
+        },
+        {
+          "itemId": "uvlt_4k_t04_i02",
+          "prompt": "judgment",
+          "correctOption": "verdict",
+          "difficulty": 0.8746897214138316,
+          "sourceItemId": "101",
+          "itemPosition": 11
+        },
+        {
+          "itemId": "uvlt_4k_t04_i03",
+          "prompt": "place",
+          "correctOption": "venue",
+          "difficulty": 0.32352269104503567,
+          "sourceItemId": "102",
+          "itemPosition": 12
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_4k_t05",
+      "band": "4k",
+      "bandOrder": 4,
+      "testletOrder": 5,
+      "partOfSpeech": "noun",
+      "options": [
+        "alley",
+        "embassy",
+        "hardware",
+        "nutrition",
+        "threshold",
+        "tobacco"
+      ],
+      "testletVariance": 1.0425425042558587,
+      "items": [
+        {
+          "itemId": "uvlt_4k_t05_i01",
+          "prompt": "government building",
+          "correctOption": "embassy",
+          "difficulty": 0.5349139166686859,
+          "sourceItemId": "103",
+          "itemPosition": 13
+        },
+        {
+          "itemId": "uvlt_4k_t05_i02",
+          "prompt": "plant that is smoked in cigarettes",
+          "correctOption": "tobacco",
+          "difficulty": -2.9493701117219797,
+          "sourceItemId": "104",
+          "itemPosition": 14
+        },
+        {
+          "itemId": "uvlt_4k_t05_i03",
+          "prompt": "small street between buildings",
+          "correctOption": "alley",
+          "difficulty": -0.1041186685762935,
+          "sourceItemId": "105",
+          "itemPosition": 15
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_4k_t06",
+      "band": "4k",
+      "bandOrder": 4,
+      "testletOrder": 6,
+      "partOfSpeech": "verb",
+      "options": [
+        "fling",
+        "forbid",
+        "harvest",
+        "shrink",
+        "simulate",
+        "vibrate"
+      ],
+      "testletVariance": 1.0425425042558587,
+      "items": [
+        {
+          "itemId": "uvlt_4k_t06_i01",
+          "prompt": "do not allow",
+          "correctOption": "forbid",
+          "difficulty": -1.9231198133265701,
+          "sourceItemId": "106",
+          "itemPosition": 16
+        },
+        {
+          "itemId": "uvlt_4k_t06_i02",
+          "prompt": "make smaller",
+          "correctOption": "shrink",
+          "difficulty": -1.9040525471145318,
+          "sourceItemId": "107",
+          "itemPosition": 17
+        },
+        {
+          "itemId": "uvlt_4k_t06_i03",
+          "prompt": "throw",
+          "correctOption": "fling",
+          "difficulty": -1.2154125825902495,
+          "sourceItemId": "108",
+          "itemPosition": 18
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_4k_t07",
+      "band": "4k",
+      "bandOrder": 4,
+      "testletOrder": 7,
+      "partOfSpeech": "verb",
+      "options": [
+        "activate",
+        "disclose",
+        "hug",
+        "intimidate",
+        "plunge",
+        "weep"
+      ],
+      "testletVariance": 1.0425425042558587,
+      "items": [
+        {
+          "itemId": "uvlt_4k_t07_i01",
+          "prompt": "cry",
+          "correctOption": "weep",
+          "difficulty": -1.2402349880161618,
+          "sourceItemId": "109",
+          "itemPosition": 19
+        },
+        {
+          "itemId": "uvlt_4k_t07_i02",
+          "prompt": "tell",
+          "correctOption": "disclose",
+          "difficulty": 0.9596203054007659,
+          "sourceItemId": "110",
+          "itemPosition": 20
+        },
+        {
+          "itemId": "uvlt_4k_t07_i03",
+          "prompt": "turn on",
+          "correctOption": "activate",
+          "difficulty": 0.7308239824717401,
+          "sourceItemId": "111",
+          "itemPosition": 21
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_4k_t08",
+      "band": "4k",
+      "bandOrder": 4,
+      "testletOrder": 8,
+      "partOfSpeech": "verb",
+      "options": [
+        "diminish",
+        "exaggerate",
+        "explode",
+        "penetrate",
+        "transplant",
+        "verify"
+      ],
+      "testletVariance": 1.0425425042558587,
+      "items": [
+        {
+          "itemId": "uvlt_4k_t08_i01",
+          "prompt": "break into pieces violently",
+          "correctOption": "explode",
+          "difficulty": 0.17521840943264408,
+          "sourceItemId": "112",
+          "itemPosition": 22
+        },
+        {
+          "itemId": "uvlt_4k_t08_i02",
+          "prompt": "get smaller",
+          "correctOption": "diminish",
+          "difficulty": -1.0484462922102686,
+          "sourceItemId": "113",
+          "itemPosition": 23
+        },
+        {
+          "itemId": "uvlt_4k_t08_i03",
+          "prompt": "move something to another place",
+          "correctOption": "transplant",
+          "difficulty": -2.150914603589066,
+          "sourceItemId": "114",
+          "itemPosition": 24
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_4k_t09",
+      "band": "4k",
+      "bandOrder": 4,
+      "testletOrder": 9,
+      "partOfSpeech": "adjective",
+      "options": [
+        "adjacent",
+        "crude",
+        "fond",
+        "sane",
+        "spherical",
+        "swift"
+      ],
+      "testletVariance": 1.0425425042558587,
+      "items": [
+        {
+          "itemId": "uvlt_4k_t09_i01",
+          "prompt": "beside",
+          "correctOption": "adjacent",
+          "difficulty": 0.688148853114438,
+          "sourceItemId": "115",
+          "itemPosition": 25
+        },
+        {
+          "itemId": "uvlt_4k_t09_i02",
+          "prompt": "not crazy",
+          "correctOption": "sane",
+          "difficulty": 0.4863689793845093,
+          "sourceItemId": "116",
+          "itemPosition": 26
+        },
+        {
+          "itemId": "uvlt_4k_t09_i03",
+          "prompt": "quick",
+          "correctOption": "swift",
+          "difficulty": -1.0082949368542218,
+          "sourceItemId": "117",
+          "itemPosition": 27
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_4k_t10",
+      "band": "4k",
+      "bandOrder": 4,
+      "testletOrder": 10,
+      "partOfSpeech": "adjective",
+      "options": [
+        "abnormal",
+        "bulky",
+        "credible",
+        "greasy",
+        "magnificent",
+        "optical"
+      ],
+      "testletVariance": 1.0425425042558587,
+      "items": [
+        {
+          "itemId": "uvlt_4k_t10_i01",
+          "prompt": "believable",
+          "correctOption": "credible",
+          "difficulty": -0.9538810241123018,
+          "sourceItemId": "118",
+          "itemPosition": 28
+        },
+        {
+          "itemId": "uvlt_4k_t10_i02",
+          "prompt": "oily",
+          "correctOption": "greasy",
+          "difficulty": 0.08853598200937342,
+          "sourceItemId": "119",
+          "itemPosition": 29
+        },
+        {
+          "itemId": "uvlt_4k_t10_i03",
+          "prompt": "unusual",
+          "correctOption": "abnormal",
+          "difficulty": -1.9181332909964168,
+          "sourceItemId": "120",
+          "itemPosition": 30
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_5k_t01",
+      "band": "5k",
+      "bandOrder": 5,
+      "testletOrder": 1,
+      "partOfSpeech": "noun",
+      "options": [
+        "gown",
+        "maid",
+        "mustache",
+        "paradise",
+        "pastry",
+        "vinegar"
+      ],
+      "testletVariance": 1.0065680367873406,
+      "items": [
+        {
+          "itemId": "uvlt_5k_t01_i01",
+          "prompt": "hair on your upper lip",
+          "correctOption": "mustache",
+          "difficulty": 0.7323112057537687,
+          "sourceItemId": "121",
+          "itemPosition": 1
+        },
+        {
+          "itemId": "uvlt_5k_t01_i02",
+          "prompt": "perfect place",
+          "correctOption": "paradise",
+          "difficulty": -1.9713559699049457,
+          "sourceItemId": "122",
+          "itemPosition": 2
+        },
+        {
+          "itemId": "uvlt_5k_t01_i03",
+          "prompt": "small baked food",
+          "correctOption": "pastry",
+          "difficulty": 1.0418519257468397,
+          "sourceItemId": "123",
+          "itemPosition": 3
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_5k_t02",
+      "band": "5k",
+      "bandOrder": 5,
+      "testletOrder": 2,
+      "partOfSpeech": "noun",
+      "options": [
+        "asthma",
+        "chord",
+        "jockey",
+        "monk",
+        "rectangle",
+        "vase"
+      ],
+      "testletVariance": 1.0065680367873406,
+      "items": [
+        {
+          "itemId": "uvlt_5k_t02_i01",
+          "prompt": "container for cut flowers",
+          "correctOption": "vase",
+          "difficulty": 0.0985320552882844,
+          "sourceItemId": "124",
+          "itemPosition": 4
+        },
+        {
+          "itemId": "uvlt_5k_t02_i02",
+          "prompt": "group of musical notes that are played at the same time",
+          "correctOption": "chord",
+          "difficulty": 0.9313846212617191,
+          "sourceItemId": "125",
+          "itemPosition": 5
+        },
+        {
+          "itemId": "uvlt_5k_t02_i03",
+          "prompt": "shape with two long and two short sides",
+          "correctOption": "rectangle",
+          "difficulty": 0.1106216976563046,
+          "sourceItemId": "126",
+          "itemPosition": 6
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_5k_t03",
+      "band": "5k",
+      "bandOrder": 5,
+      "testletOrder": 3,
+      "partOfSpeech": "noun",
+      "options": [
+        "batch",
+        "dentist",
+        "hum",
+        "lime",
+        "pork",
+        "scripture"
+      ],
+      "testletVariance": 1.0065680367873406,
+      "items": [
+        {
+          "itemId": "uvlt_5k_t03_i01",
+          "prompt": "green fruit",
+          "correctOption": "lime",
+          "difficulty": -2.3715691759234234,
+          "sourceItemId": "127",
+          "itemPosition": 7
+        },
+        {
+          "itemId": "uvlt_5k_t03_i02",
+          "prompt": "low, constant sound",
+          "correctOption": "hum",
+          "difficulty": 2.1421095471755796,
+          "sourceItemId": "128",
+          "itemPosition": 8
+        },
+        {
+          "itemId": "uvlt_5k_t03_i03",
+          "prompt": "meat from pigs",
+          "correctOption": "pork",
+          "difficulty": -1.9941026856881918,
+          "sourceItemId": "129",
+          "itemPosition": 9
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_5k_t04",
+      "band": "5k",
+      "bandOrder": 5,
+      "testletOrder": 4,
+      "partOfSpeech": "noun",
+      "options": [
+        "amnesty",
+        "claw",
+        "earthquake",
+        "perfume",
+        "sanctuary",
+        "wizard"
+      ],
+      "testletVariance": 1.0065680367873406,
+      "items": [
+        {
+          "itemId": "uvlt_5k_t04_i01",
+          "prompt": "liquid that is made to smell nice",
+          "correctOption": "perfume",
+          "difficulty": -1.3748403903124318,
+          "sourceItemId": "130",
+          "itemPosition": 10
+        },
+        {
+          "itemId": "uvlt_5k_t04_i02",
+          "prompt": "man who has magical powers",
+          "correctOption": "wizard",
+          "difficulty": -1.2989034331420475,
+          "sourceItemId": "131",
+          "itemPosition": 11
+        },
+        {
+          "itemId": "uvlt_5k_t04_i03",
+          "prompt": "safe place",
+          "correctOption": "sanctuary",
+          "difficulty": -1.1091359666309546,
+          "sourceItemId": "132",
+          "itemPosition": 12
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_5k_t05",
+      "band": "5k",
+      "bandOrder": 5,
+      "testletOrder": 5,
+      "partOfSpeech": "noun",
+      "options": [
+        "altitude",
+        "diversion",
+        "hemisphere",
+        "pirate",
+        "robe",
+        "socket"
+      ],
+      "testletVariance": 1.0065680367873406,
+      "items": [
+        {
+          "itemId": "uvlt_5k_t05_i01",
+          "prompt": "height",
+          "correctOption": "altitude",
+          "difficulty": 0.084598053328189,
+          "sourceItemId": "133",
+          "itemPosition": 13
+        },
+        {
+          "itemId": "uvlt_5k_t05_i02",
+          "prompt": "kind of clothing",
+          "correctOption": "robe",
+          "difficulty": -0.34925172348250044,
+          "sourceItemId": "134",
+          "itemPosition": 14
+        },
+        {
+          "itemId": "uvlt_5k_t05_i03",
+          "prompt": "person who attacks ships",
+          "correctOption": "pirate",
+          "difficulty": -0.38703146013956075,
+          "sourceItemId": "135",
+          "itemPosition": 15
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_5k_t06",
+      "band": "5k",
+      "bandOrder": 5,
+      "testletOrder": 6,
+      "partOfSpeech": "verb",
+      "options": [
+        "applaud",
+        "erase",
+        "jog",
+        "intrude",
+        "notify",
+        "wrestle"
+      ],
+      "testletVariance": 1.0065680367873406,
+      "items": [
+        {
+          "itemId": "uvlt_5k_t06_i01",
+          "prompt": "announce",
+          "correctOption": "notify",
+          "difficulty": -0.09017039052478755,
+          "sourceItemId": "136",
+          "itemPosition": 16
+        },
+        {
+          "itemId": "uvlt_5k_t06_i02",
+          "prompt": "enter without permission",
+          "correctOption": "intrude",
+          "difficulty": 0.022144368695071814,
+          "sourceItemId": "137",
+          "itemPosition": 17
+        },
+        {
+          "itemId": "uvlt_5k_t06_i03",
+          "prompt": "remove",
+          "correctOption": "erase",
+          "difficulty": -1.119666376331604,
+          "sourceItemId": "138",
+          "itemPosition": 18
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_5k_t07",
+      "band": "5k",
+      "bandOrder": 5,
+      "testletOrder": 7,
+      "partOfSpeech": "verb",
+      "options": [
+        "bribe",
+        "expire",
+        "immerse",
+        "meditate",
+        "persecute",
+        "shred"
+      ],
+      "testletVariance": 1.0065680367873406,
+      "items": [
+        {
+          "itemId": "uvlt_5k_t07_i01",
+          "prompt": "cut or tear into small pieces",
+          "correctOption": "shred",
+          "difficulty": -0.06759979289684191,
+          "sourceItemId": "139",
+          "itemPosition": 19
+        },
+        {
+          "itemId": "uvlt_5k_t07_i02",
+          "prompt": "end",
+          "correctOption": "expire",
+          "difficulty": 0.18432321671826918,
+          "sourceItemId": "140",
+          "itemPosition": 20
+        },
+        {
+          "itemId": "uvlt_5k_t07_i03",
+          "prompt": "think deeply",
+          "correctOption": "meditate",
+          "difficulty": 1.030999984731513,
+          "sourceItemId": "141",
+          "itemPosition": 21
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_5k_t08",
+      "band": "5k",
+      "bandOrder": 5,
+      "testletOrder": 8,
+      "partOfSpeech": "verb",
+      "options": [
+        "commemorate",
+        "growl",
+        "ignite",
+        "pierce",
+        "renovate",
+        "swap"
+      ],
+      "testletVariance": 1.0065680367873406,
+      "items": [
+        {
+          "itemId": "uvlt_5k_t08_i01",
+          "prompt": "catch fire",
+          "correctOption": "ignite",
+          "difficulty": 0.599163470215388,
+          "sourceItemId": "142",
+          "itemPosition": 22
+        },
+        {
+          "itemId": "uvlt_5k_t08_i02",
+          "prompt": "exchange",
+          "correctOption": "swap",
+          "difficulty": 1.3423355107762622,
+          "sourceItemId": "143",
+          "itemPosition": 23
+        },
+        {
+          "itemId": "uvlt_5k_t08_i03",
+          "prompt": "go into or through something",
+          "correctOption": "pierce",
+          "difficulty": 1.7215050652440695,
+          "sourceItemId": "144",
+          "itemPosition": 24
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_5k_t09",
+      "band": "5k",
+      "bandOrder": 5,
+      "testletOrder": 9,
+      "partOfSpeech": "adjective",
+      "options": [
+        "bald",
+        "eternal",
+        "imperative",
+        "lavish",
+        "moist",
+        "tranquil"
+      ],
+      "testletVariance": 1.0065680367873406,
+      "items": [
+        {
+          "itemId": "uvlt_5k_t09_i01",
+          "prompt": "calm and quiet",
+          "correctOption": "tranquil",
+          "difficulty": 1.2017314789552103,
+          "sourceItemId": "145",
+          "itemPosition": 25
+        },
+        {
+          "itemId": "uvlt_5k_t09_i02",
+          "prompt": "having no hair",
+          "correctOption": "bald",
+          "difficulty": -0.24859378141491595,
+          "sourceItemId": "146",
+          "itemPosition": 26
+        },
+        {
+          "itemId": "uvlt_5k_t09_i03",
+          "prompt": "slightly wet",
+          "correctOption": "moist",
+          "difficulty": -1.570157659186455,
+          "sourceItemId": "147",
+          "itemPosition": 27
+        }
+      ]
+    },
+    {
+      "testletId": "uvlt_5k_t10",
+      "band": "5k",
+      "bandOrder": 5,
+      "testletOrder": 10,
+      "partOfSpeech": "adjective",
+      "options": [
+        "diesel",
+        "incidental",
+        "mandatory",
+        "prudent",
+        "superficial",
+        "tame"
+      ],
+      "testletVariance": 1.0065680367873406,
+      "items": [
+        {
+          "itemId": "uvlt_5k_t10_i01",
+          "prompt": "not dangerous",
+          "correctOption": "tame",
+          "difficulty": 1.5793839028159844,
+          "sourceItemId": "148",
+          "itemPosition": 28
+        },
+        {
+          "itemId": "uvlt_5k_t10_i02",
+          "prompt": "required",
+          "correctOption": "mandatory",
+          "difficulty": 1.0122034242092448,
+          "sourceItemId": "149",
+          "itemPosition": 29
+        },
+        {
+          "itemId": "uvlt_5k_t10_i03",
+          "prompt": "using good judgment",
+          "correctOption": "prudent",
+          "difficulty": 1.473582714105217,
+          "sourceItemId": "150",
+          "itemPosition": 30
+        }
+      ]
+    }
+  ],
+  "integrity": {
+    "appCatScriptSha256": "0ba743dbc5bbfb675e9bbdb30a2619c71187c56fe6c47e5ca4701111fd25151b",
+    "itemParametersCsvSha256": "01498b4f687a19436ac349dcfd822c9fb26df1c367e05c07b08ea3d45163c1e7",
+    "factorVariancesCsvSha256": "96a61dc9d1e7950860b1bbcee26f29d3043c14bf8fc0ba5a5fdca96f8cf1914f",
+    "payloadSha256": "cf196ec764d7bd03c53a86630a7d6442ae38066f8f8d976c28a8c51efa2167e9"
+  }
+}

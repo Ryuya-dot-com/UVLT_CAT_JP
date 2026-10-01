@@ -1,0 +1,31 @@
+{
+  "version": "jp-0.1.0",
+  "purpose": "public_technical_demo",
+  "publicationRequested": "2026-10-01",
+  "sources": {
+    "bank.json": {
+      "path": "App_UVLT_Crossover_Study/data/uvlt_bank.jp463.m3.dev.json",
+      "sha256": "0468a1883b05d21e571ef6c4cd77c713003d649e786480318c8fe5903a74eeea"
+    },
+    "scoring.js": {
+      "path": "App_UVLT_Crossover_Study/src/scoring.js",
+      "sha256": "3016e0a3c03f08500a43b533cbb8e1ccbcaca4cd1f972fa2dbcffad2eee1d07d"
+    },
+    "practice.js": {
+      "path": "App_UVLT_Crossover_Study/src/practice-testlets.js",
+      "sha256": "62ccdae035c11030d40f57e658fe008ea13c5ee7abbf2627cc5b7402e67a05e5"
+    }
+  },
+  "files": {
+    "index.html": "0bb9e7e1949bd5637242f7a9a1d5fa274ab1149949706c33192301af249eee5c",
+    "researcher.html": "a8dc84acc71ee7f100a9f74434c1a867393e9a552fa382656dc7689abba7c959",
+    "styles.css": "98d6361686088027a0860ca68926dfd2b0251056793c9e6b93421a6ce109cf6a",
+    "app.js": "d771351442f3fd49af609bb4905f0b3db617ba51311b6679b261ad6da91938f8",
+    "results.js": "90b393284c1ced3db4c563f4d8af87b585be19555a82e4aa627184d5452ad7c1",
+    "bank.json": "0468a1883b05d21e571ef6c4cd77c713003d649e786480318c8fe5903a74eeea",
+    "scoring.js": "3016e0a3c03f08500a43b533cbb8e1ccbcaca4cd1f972fa2dbcffad2eee1d07d",
+    "practice.js": "62ccdae035c11030d40f57e658fe008ea13c5ee7abbf2627cc5b7402e67a05e5",
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "README.md": "a396f72f1df98ca80b256345c8ac2ad5a31bcdbac6ba446b2ecae4f1c1066a24"
+  }
+}

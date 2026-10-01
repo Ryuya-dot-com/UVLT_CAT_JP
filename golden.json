@@ -1,0 +1,449 @@
+{
+  "source": "App_UVLT_Crossover_Study/src/scoring.js + JP463 M3 development bank",
+  "scenarios": [
+    {
+      "name": "all-correct",
+      "path": [
+        {
+          "testletId": "uvlt_5k_t05",
+          "outcomes": [
+            true,
+            true,
+            true
+          ],
+          "theta": 0.83708463799748,
+          "posteriorSD": 0.9926478546547794,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_5k_t08",
+          "outcomes": [
+            true,
+            true,
+            true
+          ],
+          "theta": 1.6489234484885766,
+          "posteriorSD": 0.8863515751709058,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_5k_t10",
+          "outcomes": [
+            true,
+            true,
+            true
+          ],
+          "theta": 2.1831888366636134,
+          "posteriorSD": 0.8179598613393487,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_4k_t04",
+          "outcomes": [
+            true,
+            true,
+            true
+          ],
+          "theta": 2.4448885865632377,
+          "posteriorSD": 0.7780376824106133,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_5k_t07",
+          "outcomes": [
+            true,
+            true,
+            true
+          ],
+          "theta": 2.6394031230872588,
+          "posteriorSD": 0.7492783626588835,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_5k_t02",
+          "outcomes": [
+            true,
+            true,
+            true
+          ],
+          "theta": 2.799055739628566,
+          "posteriorSD": 0.7266091575201259,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_4k_t07",
+          "outcomes": [
+            true,
+            true,
+            true
+          ],
+          "theta": 2.936310604478053,
+          "posteriorSD": 0.7088608179418515,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_5k_t01",
+          "outcomes": [
+            true,
+            true,
+            true
+          ],
+          "theta": 3.0566387499712544,
+          "posteriorSD": 0.6938980630508864,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_5k_t03",
+          "outcomes": [
+            true,
+            true,
+            true
+          ],
+          "theta": 3.18410252455478,
+          "posteriorSD": 0.6831346521707119,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_4k_t09",
+          "outcomes": [
+            true,
+            true,
+            true
+          ],
+          "theta": 3.267516819419717,
+          "posteriorSD": 0.6722608992272776,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_5k_t09",
+          "outcomes": [
+            true,
+            true,
+            true
+          ],
+          "theta": 3.344351367267249,
+          "posteriorSD": 0.6630408379572474,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_4k_t03",
+          "outcomes": [
+            true,
+            true,
+            true
+          ],
+          "theta": 3.4205854250018564,
+          "posteriorSD": 0.6551334124486536,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_4k_t05",
+          "outcomes": [
+            true,
+            true,
+            true
+          ],
+          "theta": 3.468123406124478,
+          "posteriorSD": 0.6488832931175335,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_3k_t10",
+          "outcomes": [
+            true,
+            true,
+            true
+          ],
+          "theta": 3.5095247829360394,
+          "posteriorSD": 0.6432061526307641,
+          "stopReason": "max_testlets"
+        }
+      ]
+    },
+    {
+      "name": "all-wrong",
+      "path": [
+        {
+          "testletId": "uvlt_5k_t05",
+          "outcomes": [
+            false,
+            false,
+            false
+          ],
+          "theta": -0.959861153990347,
+          "posteriorSD": 0.9823881769814092,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_2k_t08",
+          "outcomes": [
+            false,
+            false,
+            false
+          ],
+          "theta": -1.9193727014191084,
+          "posteriorSD": 0.8614301013840153,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_2k_t09",
+          "outcomes": [
+            false,
+            false,
+            false
+          ],
+          "theta": -2.6102064000261507,
+          "posteriorSD": 0.7859238271938638,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_2k_t07",
+          "outcomes": [
+            false,
+            false,
+            false
+          ],
+          "theta": -3.3275108080590674,
+          "posteriorSD": 0.7373103419588178,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_2k_t04",
+          "outcomes": [
+            false,
+            false,
+            false
+          ],
+          "theta": -3.8814723492900334,
+          "posteriorSD": 0.6960034567353742,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_2k_t03",
+          "outcomes": [
+            false,
+            false,
+            false
+          ],
+          "theta": -4.313570231387623,
+          "posteriorSD": 0.6663441016920294,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_2k_t02",
+          "outcomes": [
+            false,
+            false,
+            false
+          ],
+          "theta": -4.818086397777289,
+          "posteriorSD": 0.6417462656533801,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_2k_t05",
+          "outcomes": [
+            false,
+            false,
+            false
+          ],
+          "theta": -5.122247520734279,
+          "posteriorSD": 0.6203225382750807,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_2k_t01",
+          "outcomes": [
+            false,
+            false,
+            false
+          ],
+          "theta": -5.289168948704734,
+          "posteriorSD": 0.6038944450154495,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_3k_t05",
+          "outcomes": [
+            false,
+            false,
+            false
+          ],
+          "theta": -5.467751937299551,
+          "posteriorSD": 0.5916328857181998,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_3k_t01",
+          "outcomes": [
+            false,
+            false,
+            false
+          ],
+          "theta": -5.5867351545045665,
+          "posteriorSD": 0.579826601624975,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_3k_t03",
+          "outcomes": [
+            false,
+            false,
+            false
+          ],
+          "theta": -5.701274299959422,
+          "posteriorSD": 0.5706343249624433,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_1k_t04",
+          "outcomes": [
+            false,
+            false,
+            false
+          ],
+          "theta": -5.902872663038302,
+          "posteriorSD": 0.5713221847724297,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_1k_t06",
+          "outcomes": [
+            false,
+            false,
+            false
+          ],
+          "theta": -6.091148010363635,
+          "posteriorSD": 0.5715482055157398,
+          "stopReason": "max_testlets"
+        }
+      ]
+    },
+    {
+      "name": "mixed",
+      "path": [
+        {
+          "testletId": "uvlt_5k_t05",
+          "outcomes": [
+            true,
+            false,
+            true
+          ],
+          "theta": 0.20696050955140083,
+          "posteriorSD": 0.952958786308118,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_5k_t02",
+          "outcomes": [
+            true,
+            false,
+            true
+          ],
+          "theta": 0.45818368271055454,
+          "posteriorSD": 0.8249583564443627,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_5k_t07",
+          "outcomes": [
+            true,
+            false,
+            true
+          ],
+          "theta": 0.6086025117307771,
+          "posteriorSD": 0.738414202758308,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_4k_t04",
+          "outcomes": [
+            true,
+            false,
+            true
+          ],
+          "theta": 0.7375070998946456,
+          "posteriorSD": 0.6743245672320354,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_5k_t08",
+          "outcomes": [
+            true,
+            false,
+            true
+          ],
+          "theta": 0.9276787794881918,
+          "posteriorSD": 0.6252425956966743,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_5k_t10",
+          "outcomes": [
+            true,
+            false,
+            true
+          ],
+          "theta": 1.0866171483608735,
+          "posteriorSD": 0.5849196987851337,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_4k_t07",
+          "outcomes": [
+            true,
+            false,
+            true
+          ],
+          "theta": 1.0884231814518355,
+          "posteriorSD": 0.5539991276328434,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_4k_t09",
+          "outcomes": [
+            true,
+            false,
+            true
+          ],
+          "theta": 1.074648169079452,
+          "posteriorSD": 0.5269898048973055,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_5k_t01",
+          "outcomes": [
+            true,
+            false,
+            true
+          ],
+          "theta": 1.0710407976966585,
+          "posteriorSD": 0.5046701465529527,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_5k_t09",
+          "outcomes": [
+            true,
+            false,
+            true
+          ],
+          "theta": 1.0477750307040785,
+          "posteriorSD": 0.4851703276356065,
+          "stopReason": null
+        },
+        {
+          "testletId": "uvlt_3k_t10",
+          "outcomes": [
+            true,
+            false,
+            true
+          ],
+          "theta": 1.00242532270385,
+          "posteriorSD": 0.4665737353042034,
+          "stopReason": "target_se"
+        }
+      ]
+    }
+  ]
+}
