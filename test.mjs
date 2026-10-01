@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { TestletScorer } from './scoring.js';
 import { PRACTICE_TESTLETS } from './practice.js';
-import { validatePack, interval95, resultRecord, resultCsv } from './results.js';
+import { normalizeIdentity, validatePack, interval95, resultRecord, resultCsv } from './results.js';
 
 const read = name => readFileSync(new URL(name, import.meta.url));
 const pack = JSON.parse(read('bank.json'));
@@ -64,13 +64,24 @@ test('stop boundaries, partial data, model-conditional intervals and exports sta
   assert.equal(scorer.shouldStop({summary:{se:.1,boundaryFlag:true}},6),null);
   assert.deepEqual(interval95({grid:[-1,0,1],weights:[.02,.96,.02]}),[0,0]);
   const draft = {testletId:pack.testlets[0].testletId,choices:[1,null,null]};
-  const record = resultRecord(pack,manifest.files['bank.json'],{sessionId:'test',startedAt:'2026-10-01',responses:[]},p,'user_stop','2026-10-01',draft);
+  const record = resultRecord(pack,manifest.files['bank.json'],{sessionId:'test',identity:{participantName:'=CMD("test")',studentId:'+123'},startedAt:'2026-10-01',responses:[]},p,'user_stop','2026-10-01',draft);
   assert.equal(record.answeredItems,0);
   assert.equal(record.precisionReached,false);
   assert.equal(record.purpose,'public_technical_demo');
   assert.deepEqual(record.unscoredDraft,draft);
   assert.equal(record.finalEstimate.se,p.summary.se);
-  assert.equal(resultCsv(record).trim().split('\r\n').length,1);
+  const csv = resultCsv(record);
+  assert.equal(csv.trim().split('\r\n').length,2);
+  assert.match(csv,/"'=CMD\(""test""\)"/);
+  assert.match(csv,/"'\+123"/);
+  assert.equal(csv.trim().split('\r\n')[0].split(',').length,csv.trim().split('\r\n')[1].split(',').length);
   assert.ok(record.bands.every(b => b.answered===0));
   assert.doesNotMatch(JSON.stringify(record), /correctOption|"prompt"|"options"/);
+});
+
+test('identity is required and retains text IDs without numeric coercion', () => {
+  assert.deepEqual(normalizeIdentity({participantName:'  Test\n Participant  ',studentId:'0012345'}),{participantName:'Test Participant',studentId:'0012345'});
+  assert.throws(() => normalizeIdentity({participantName:' ',studentId:'123'}),/氏名/);
+  assert.throws(() => normalizeIdentity({participantName:'Test',studentId:''}),/学籍番号/);
+  assert.throws(() => normalizeIdentity({participantName:'x'.repeat(101),studentId:'123'}),/100文字/);
 });

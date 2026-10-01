@@ -3,11 +3,11 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive"><meta name="referrer" content="no-referrer">
   <title>日本語ベースUVLT CAT：研究者向け情報</title>
-  <link rel="stylesheet" href="styles.css?v=jp-0.1.0">
+  <link rel="stylesheet" href="styles.css?v=jp-0.2.0">
 </head><body><main>
   <header><div class="wordmark"><strong>UVLT</strong> CAT · JP</div><a href="./">CATを開く</a></header>
   <article class="card">
-    <p class="eyebrow">公開デモ · 0.1.0</p><h1>日本語ベースCATの仕様</h1>
+    <p class="eyebrow">JP · 0.2.0</p><h1>日本語ベースCATの仕様</h1>
     <p>日本語母語話者の大学生463名によるM3 Raschテストレットモデルを使います。既存の日本語版開発パックと同じ150項目・50テストレット、項目難易度、帯域別テストレット分散、推定処理を使用します。これは2PLの日越比較アプリとは異なるモデルです。</p>
     <table><tbody>
       <tr><th>対象フォーム</th><td>UVLT Version B、1K〜5K</td></tr>
@@ -24,7 +24,8 @@
     <p>事後SDと区間は、モデル・校正の点推定に条件付きです。校正不確実性を含む反復標本抽出の標準誤差ではありません。JSONの95%区間はθの等裾事後区間です。数の上限や自主終了は精度達成を意味せず、precisionReachedに別途記録します。</p>
     <p>項目露出の制御、正式な同意手続き、研究者への自動送信はありません。LJT・LexDepth・全150問とのクロスオーバーは含みません。日本語校正尺度のθを、既存ベトナム語ベースRasch CATのθと直接同一視しないでください。</p>
     <h2>記録と保存</h2>
-    <p>氏名や学籍番号は収集せず、回答はページのメモリに保持します。再読み込みやタブを閉じると消えます。JSONは出題順、回答、正誤、所要時間、推定値、停止理由、未採点の途中回答、モデル情報、バンクのハッシュを記録します。CSVは採点済み項目ごとの記録です。どちらも問題文・正答キーを複製しません。</p>
+    <p>開始時に氏名・学籍番号を入力し、終了時にCSVを自動ダウンロードします。氏名・学籍番号・回答はページのメモリに保持し、再読み込みやタブを閉じると消えます。保存できなかった場合は結果画面から再ダウンロードできます。ファイル名は無作為なセッションIDを使い、氏名・学籍番号はファイル内に記録します。</p>
+    <p>JSONは氏名・学籍番号に加え、出題順、回答、正誤、所要時間、推定値、停止理由、未採点の途中回答、モデル情報、バンクのハッシュを記録します。CSVは採点済み項目ごとの記録です。本番の回答が0問なら、回答を捏造せずsession_summary行だけを保存します。どちらも問題文・正答キーを複製しません。氏名・学籍番号が数式として解釈される文字で始まる場合、CSVでは先頭にアポストロフィを付けます。</p>
     <p>回答をアプリから自動送信することはありません。配信サーバーには通常のページアクセスが発生します。ブラウザ内採点のため、配信される問題バンクには正答キーとパラメタが含まれます。試験問題の秘匿を保証する構成ではありません。</p>
     <p><a href="./">日本語ベースCATを開く</a> · <a href="https://uvlt-cat.pages.dev/">既存のベトナム語ベースCAT</a></p>
   </article>

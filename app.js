@@ -1,9 +1,9 @@
-import { TestletScorer } from './scoring.js?v=jp-0.1.0';
-import { PRACTICE_TESTLETS } from './practice.js?v=jp-0.1.0';
-import { VERSION, validatePack, resultRecord, resultCsv } from './results.js?v=jp-0.1.0';
+import { TestletScorer } from './scoring.js?v=jp-0.2.0';
+import { PRACTICE_TESTLETS } from './practice.js?v=jp-0.2.0';
+import { VERSION, normalizeIdentity, validatePack, resultRecord, resultCsv } from './results.js?v=jp-0.2.0';
 
 const $ = id => document.getElementById(id);
-let pack, bankHash, scorer, posterior, current, session, record;
+let pack, bankHash, scorer, posterior, current, session, record, identity;
 let stage = 'welcome', practiceIndex = 0, practiceReviewed = false, currentStarted = 0, saved = false;
 const hash = async raw => [...new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(raw)))].map(b => b.toString(16).padStart(2,'0')).join('');
 function fail(error) { $('error').textContent = `処理を完了できませんでした。${error.message}`; $('error').hidden = false; }
@@ -52,7 +52,7 @@ function renderTask() {
 }
 function startMain() {
   stage = 'main';
-  session = { sessionId: crypto.randomUUID(), startedAt: new Date().toISOString(), responses: [] };
+  session = { sessionId: crypto.randomUUID(), identity, startedAt: new Date().toISOString(), responses: [] };
   posterior = scorer.createPrior();
   current = scorer.selectNext(posterior, []).testlet;
   renderTask();
@@ -63,8 +63,8 @@ function finish(reason) {
   record = resultRecord(pack, bankHash, session, posterior, reason, new Date().toISOString(), draft);
   stage = 'result'; show('result');
   $('completion-reason').textContent = {
-    target_se: '設定した推定精度に達したため、終了しました。',
-    max_testlets: record.precisionReached ? '最大14セットに達し、目標精度にも到達しました。' : '最大14セットに達したため、終了しました。目標精度には到達していません。',
+    target_se: 'すべての回答が完了しました。',
+    max_testlets: 'すべての回答が完了しました。',
     user_stop: 'ご自身の操作で終了しました。回答途中のセットは採点していません。'
   }[reason];
   const correct = record.bands.reduce((n, b) => n+b.correct, 0);
@@ -77,11 +77,15 @@ function finish(reason) {
     return tr;
   }));
   $('zero-note').hidden = record.responses.length !== 0;
-  $('download-csv').disabled = record.responses.length === 0;
   $('result-title').focus();
+  try { download('csv'); }
+  catch { $('save-status').textContent = '自動ダウンロードを開始できませんでした。「結果CSVをもう一度保存」を押してください。'; }
 }
 
-on('start', 'click', () => {
+on('identity-form', 'submit', () => {
+  $('identity-message').textContent = '';
+  try { identity = normalizeIdentity({participantName:$('participant-name').value,studentId:$('student-id').value}); }
+  catch (error) { $('identity-message').textContent = error.message; return; }
   stage = 'practice'; practiceIndex = 0; practiceReviewed = false;
   current = PRACTICE_TESTLETS[practiceIndex]; renderTask();
 });
@@ -119,9 +123,11 @@ function download(kind) {
   const blob = new Blob([data], { type: kind === 'json' ? 'application/json' : 'text/csv;charset=utf-8' });
   const url = URL.createObjectURL(blob), link = document.createElement('a');
   link.href = url; link.download = `UVLT_CAT_JP_${record.sessionId}.${kind}`;
-  document.body.append(link); link.click(); link.remove();
-  setTimeout(() => URL.revokeObjectURL(url), 1000); saved = true;
-  $('save-status').textContent = 'ダウンロードを開始しました。保存先を確認してください。';
+  document.body.append(link);
+  try { link.click(); }
+  finally { link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000); }
+  saved = true;
+  $('save-status').textContent = 'ダウンロードを開始しました。見つからない場合は、保存ボタンをもう一度押してください。';
 }
 on('download-json','click',() => download('json'));
 on('download-csv','click',() => download('csv'));

@@ -7,22 +7,27 @@
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
   <title>UVLT CAT · 日本語母語話者ベース</title>
-  <link rel="stylesheet" href="styles.css?v=jp-0.1.0">
-  <script type="module" src="app.js?v=jp-0.1.0"></script>
+  <link rel="stylesheet" href="styles.css?v=jp-0.2.0">
+  <script type="module" src="app.js?v=jp-0.2.0"></script>
 </head>
 <body>
 <main>
-  <header><div class="wordmark"><strong>UVLT</strong> CAT · JP</div><span class="badge">動作確認用・開発版</span></header>
+  <header><div class="wordmark"><strong>UVLT</strong> CAT · JP</div></header>
   <p id="error" role="alert" hidden></p>
   <section id="welcome" class="card">
-    <p class="eyebrow">日本語母語話者463名のデータに基づくCAT</p>
-    <h1>英単語の意味を、<br>自分のペースで。</h1>
-    <p class="lead">6つの英単語から、3つの意味に合う語を選びます。回答に合わせて、次に出る問題が変わります。</p>
+    <h1>英語語彙テスト</h1>
+    <p class="lead">6つの英単語から、3つの意味に合う語を選びます。</p>
     <div class="facts"><div><small>練習</small><strong>2セット</strong></div><div><small>本番</small><strong>6〜14セット</strong></div><div><small>時間制限</small><strong>なし</strong></div></div>
-    <p>本番は18〜42問です。十分な推定精度に達すると早めに終了します。最大数まで回答しても、目標精度に届かない場合があります。</p>
-    <p>氏名・学籍番号の入力はありません。回答はこのタブ内だけで処理し、自動送信しません。終了後に結果を保存できます。再読み込みやタブを閉じる操作で、未保存の回答は失われます。</p>
-    <p class="muted">この公開デモは、操作と計算の確認用です。測定条件はまだ検証途中で、正式な検証研究用の実施版ではありません。</p>
-    <button id="start" disabled>準備中…</button>
+    <p>氏名・学籍番号を入力して始めてください。終了時に結果CSVが自動でダウンロードされます。</p>
+    <form id="identity-form" novalidate>
+      <div class="settings">
+        <label for="participant-name">氏名<input id="participant-name" name="participant_name" type="text" autocomplete="name" maxlength="100" required></label>
+        <label for="student-id">学籍番号<input id="student-id" name="student_id" type="text" autocomplete="off" maxlength="64" required></label>
+      </div>
+      <p id="identity-message" role="alert"></p>
+      <button id="start" type="submit" disabled>準備中…</button>
+    </form>
+    <p class="muted">氏名・学籍番号・回答は結果ファイルに記録され、自動送信はされません。終了まで、再読み込みやタブを閉じる操作はしないでください。</p>
   </section>
   <section id="task" class="card" hidden>
     <div class="task-header"><h1 id="task-title" tabindex="-1"></h1><span id="elapsed" class="muted"></span></div>
@@ -38,18 +43,17 @@
     <button id="stop" class="secondary" type="button" hidden>ここで終了して結果へ</button>
   </section>
   <section id="result" class="card" hidden>
-    <p class="eyebrow">今回の記録</p><h1 tabindex="-1" id="result-title">お疲れさまでした。</h1>
+    <h1 tabindex="-1" id="result-title">テスト終了</h1>
     <p id="completion-reason"></p><p id="result-counts"></p>
     <div class="table-scroll"><table><thead><tr><th>頻度帯</th><th>今回の正答数／回答数</th></tr></thead><tbody id="bands"></tbody></table></div>
-    <p class="muted">出題は適応的に選ばれます。この比率は帯域全体の得点や習得判定ではありません。未出題の帯域を0点とは扱いません。</p>
-    <p>単語の意味を確認したら、例文の中でも使い方を確かめてみてください。意味が分かることと、実際に使えることは別の側面です。</p>
-    <p id="zero-note" class="muted" hidden>本番の回答がないため、推定値は事前分布に基づきます。</p>
-    <button id="download-json" type="button">結果を保存（JSON）</button>
-    <button id="download-csv" type="button" class="secondary">回答記録を保存（CSV）</button>
+    <p id="zero-note" class="muted" hidden>本番への回答はありません。</p>
+    <p>結果CSVを保存し、研究者が指定した方法で提出してください。</p>
+    <button id="download-csv" type="button">結果CSVをもう一度保存</button>
+    <button id="download-json" type="button" class="secondary">詳細記録を保存（JSON）</button>
     <p id="save-status" role="status" aria-live="polite"></p>
     <button id="restart" class="secondary" type="button">もう一度試す</button>
   </section>
-  <footer><a href="researcher.html">研究者向け：モデル・条件・結果の解釈</a> · JP 0.1.0</footer>
-  <noscript>このデモにはJavaScriptが必要です。</noscript>
+  <footer><a href="researcher.html">研究者向け情報</a> · JP 0.2.0</footer>
+  <noscript>このテストにはJavaScriptが必要です。</noscript>
 </main>
 </body></html>

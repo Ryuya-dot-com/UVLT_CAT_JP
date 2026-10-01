@@ -1,5 +1,5 @@
 {
-  "version": "jp-0.1.0",
+  "version": "jp-0.2.0",
   "purpose": "public_technical_demo",
   "publicationRequested": "2026-10-01",
   "publicationAuthorized": {
@@ -22,15 +22,15 @@
     }
   },
   "files": {
-    "index.html": "0bb9e7e1949bd5637242f7a9a1d5fa274ab1149949706c33192301af249eee5c",
-    "researcher.html": "a8dc84acc71ee7f100a9f74434c1a867393e9a552fa382656dc7689abba7c959",
+    "index.html": "6fa5714928b16884ac64c9da6cb466e0a1df84edc002e53cfabb555f8efa47df",
+    "researcher.html": "1734395cb5b92f09f72452f4efdff7ce98891f01947e56755062367f9cac9186",
     "styles.css": "98d6361686088027a0860ca68926dfd2b0251056793c9e6b93421a6ce109cf6a",
-    "app.js": "d771351442f3fd49af609bb4905f0b3db617ba51311b6679b261ad6da91938f8",
-    "results.js": "90b393284c1ced3db4c563f4d8af87b585be19555a82e4aa627184d5452ad7c1",
+    "app.js": "071874bf061560ccb453628f5ba651ab47e1b514be0517941044b38e20c7a329",
+    "results.js": "32469468c91f151f8a476be2933fa13a4873959dfc0f9e2f852f3a35d8d8aa58",
     "bank.json": "0468a1883b05d21e571ef6c4cd77c713003d649e786480318c8fe5903a74eeea",
     "scoring.js": "3016e0a3c03f08500a43b533cbb8e1ccbcaca4cd1f972fa2dbcffad2eee1d07d",
     "practice.js": "62ccdae035c11030d40f57e658fe008ea13c5ee7abbf2627cc5b7402e67a05e5",
     ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "README.md": "df2cf2b5a0a54174756108fd25589ae3af57b3e64f2494cbe61352f17ab0ee0f"
+    "README.md": "47476a0cfc1a9d4ae4e7bd5b49d21326c3bb3c181b91daad1b80ec1b3f528f0b"
   }
 }

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { TestletScorer } from './scoring.js';
 
-let elements, blob, count=0, requests=[];
+let elements, blob, count=0, requests=[], downloads=[], blockDownload=false;
 class Element {
   constructor(tag='div') { this.tag=tag; this.children=[]; this.listeners={}; this.value=''; this.hidden=false; this.textContent=''; }
   set id(value) { this._id=value; elements.set(value,this); }
@@ -12,7 +12,9 @@ class Element {
   replaceChildren(...items) { this.children=items; }
   add(item) { this.children.push(item); }
   addEventListener(event,fn) { this.listeners[event]=fn; }
-  focus() {} click() {} remove() {}
+  focus() {}
+  click() { if (this.tag==='a') { if (blockDownload) throw new Error('download blocked'); downloads.push(this.download); } }
+  remove() {}
 }
 globalThis.Option=class extends Element { constructor(label,value) { super('option'); this.textContent=label; this.value=value; } };
 globalThis.window={addEventListener() {}};
@@ -27,7 +29,7 @@ globalThis.fetch=async name=>{
 };
 const $=id=>elements.get(id);
 async function page() {
-  elements=new Map(); requests=[];
+  elements=new Map(); requests=[]; downloads=[]; blockDownload=false;
   const html=readFileSync(new URL('index.html',import.meta.url),'utf8');
   for (const match of html.matchAll(/<(\w+)([^>]*)>/g)) {
     const id=match[2].match(/\bid="([^"]+)"/);
@@ -46,10 +48,14 @@ async function fire(id,event='click') {
 }
 const fill=()=>[0,1,2].forEach((value,i)=>{$(`answer-${i}`).value=String(value);});
 async function begin() {
-  await fire('start');
+  $('participant-name').value='  Test Participant  '; $('student-id').value='0012345';
+  await fire('identity-form','submit');
   for (let i=0;i<2;i++) { fill(); await fire('answer-form','submit'); await fire('answer-form','submit'); }
 }
-await page(); await begin();
+await page();
+await fire('identity-form','submit'); assert.match($('identity-message').textContent,/氏名/); assert.equal($('welcome').hidden,false);
+$('participant-name').value='Test'; await fire('identity-form','submit'); assert.match($('identity-message').textContent,/学籍番号/);
+await begin();
 assert.equal($('task').hidden,false);
 await fire('answer-form','submit');
 assert.match($('answer-message').textContent,/すべて/);
@@ -61,9 +67,16 @@ while ($('result').hidden) {
   assert.ok(sets<=14);
 }
 assert.ok(sets>=6);
+assert.equal(downloads.length,1,'Completion must trigger CSV without another click');
+assert.match(downloads[0],/^UVLT_CAT_JP_[\w-]+\.csv$/);
+assert.doesNotMatch(downloads[0],/Participant|0012345/);
+const automaticCsv=await blob.text();
+assert.match(automaticCsv,/"Test Participant","0012345"/);
+assert.equal(automaticCsv.trim().split('\r\n').length,sets*3+1);
 await fire('download-json');
 const record=JSON.parse(await blob.text());
 assert.equal(record.responses.length,sets);
+assert.deepEqual(record.identity,{participantName:'Test Participant',studentId:'0012345'});
 assert.equal(record.practiceIncludedInScore,false);
 assert.equal(record.purpose,'public_technical_demo');
 assert.equal(record.unscoredDraft,null);
@@ -72,16 +85,24 @@ const rescored=new TestletScorer(pack).score(record.responses);
 assert.equal(rescored.summary.theta,record.finalEstimate.theta);
 assert.equal(rescored.summary.se,record.finalEstimate.se);
 assert.equal(new Set(record.responses.map(r=>r.testletId)).size,sets);
-await fire('download-csv'); assert.equal((await blob.text()).trim().split('\r\n').length,sets*3+1);
+await fire('download-csv'); assert.equal(await blob.text(),automaticCsv);
 await fire('download-json'); assert.deepEqual(JSON.parse(await blob.text()),record);
 assert.deepEqual(requests,['bank.json','manifest.json']);
 
-await page(); await begin(); $('answer-0').value='1';
-await fire('stop'); await fire('download-json');
+await page(); await begin(); $('answer-0').value='1'; blockDownload=true;
+await fire('stop');
+assert.equal($('result').hidden,false); assert.equal(downloads.length,0);
+assert.match($('save-status').textContent,/開始できませんでした/);
+blockDownload=false;
+await fire('download-csv');
+const partialCsv=await blob.text();
+assert.match(partialCsv,/"session_summary"/); assert.match(partialCsv,/"Test Participant","0012345"/);
+assert.equal(partialCsv.trim().split('\r\n').length,2);
+await fire('download-json');
 const partial=JSON.parse(await blob.text());
 assert.equal(partial.responses.length,0);
 assert.deepEqual(partial.unscoredDraft.choices,[1,null,null]);
 assert.equal(partial.precisionReached,false);
-assert.equal($('download-csv').disabled,true);
+assert.notEqual($('download-csv').disabled,true);
 assert.equal($('zero-note').hidden,false);
-console.log('PASS: practice, missing/duplicate choices, complete adaptive session, JSON/CSV, faithful rescoring, stable downloads, zero-response and partial-set termination.');
+console.log('PASS: required identity, complete CAT, automatic CSV, identity export, stable retry, blocked download recovery, zero-response summary and partial-set termination.');
