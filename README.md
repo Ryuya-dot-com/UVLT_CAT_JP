@@ -18,7 +18,7 @@ The underlying calibration and stopping settings are provisional, not operationa
 
 ## Publication and data
 
-The owner requested this Japanese Rasch-testlet public URL on 2026-10-01. The release includes browser-readable Version B stimuli, answer keys, and aggregate item parameters needed for browser scoring; it contains no participant-level source data. Publication does not grant a new license to third-party UVLT material. The bank is copied byte-for-byte, preserving `developmentOnly: true` and `operationallyFrozen: false`.
+The owner explicitly approved publication to `Ryuya-dot-com/UVLT_CAT_JP` and its GitHub Pages site on 2026-10-01, including Version B stimuli/options/answer keys and aggregate JP463 item/testlet parameters, acknowledging that anyone can retrieve those public files. The release contains no participant-level source data. Publication does not grant a new license to third-party UVLT material. The bank is copied byte-for-byte, preserving `developmentOnly: true` and `operationallyFrozen: false`.
 
 The standalone page requests no participant name or student ID. It keeps responses in memory only and does not automatically transmit them or persist them to browser storage. Reloading loses unsaved progress. Optional JSON and CSV downloads stay with the user; they do not include question text or answer keys. JSON includes model settings, bank hash, estimates, termination conditions and any unscored partial set. CSV contains scored item rows only. Normal hosting access logs are separate from response collection.
 

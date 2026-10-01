@@ -2,6 +2,11 @@
   "version": "jp-0.1.0",
   "purpose": "public_technical_demo",
   "publicationRequested": "2026-10-01",
+  "publicationAuthorized": {
+    "date": "2026-10-01",
+    "destination": "Ryuya-dot-com/UVLT_CAT_JP and GitHub Pages",
+    "scope": "App, Version B stimuli/options/answer keys, and aggregate JP463 item/testlet parameters; no participant source records"
+  },
   "sources": {
     "bank.json": {
       "path": "App_UVLT_Crossover_Study/data/uvlt_bank.jp463.m3.dev.json",
@@ -26,6 +31,6 @@
     "scoring.js": "3016e0a3c03f08500a43b533cbb8e1ccbcaca4cd1f972fa2dbcffad2eee1d07d",
     "practice.js": "62ccdae035c11030d40f57e658fe008ea13c5ee7abbf2627cc5b7402e67a05e5",
     ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "README.md": "a396f72f1df98ca80b256345c8ac2ad5a31bcdbac6ba446b2ecae4f1c1066a24"
+    "README.md": "df2cf2b5a0a54174756108fd25589ae3af57b3e64f2494cbe61352f17ab0ee0f"
   }
 }
